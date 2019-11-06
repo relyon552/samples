@@ -1,0 +1,768 @@
+03/06/2019 10:52:48 : ===  showTempChallan() START ===
+03/06/2019 10:52:48 : Step 1 Before GetAutoChallanCount()
+03/06/2019 10:52:48 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 10:52:48 : Step 3 Before SaveChallaninTemp()
+03/06/2019 10:52:54 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 10:52:54 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 10:52:54 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 10:52:54 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 10:52:54 : challans.Count : 10
+03/06/2019 10:52:54 : After rptTempChallan.DataSource
+03/06/2019 10:52:54 : Before UpdateStatus1
+03/06/2019 10:52:54 : === Inside UpdateStatus1 ===
+03/06/2019 10:52:54 : Step 1
+03/06/2019 10:52:54 : total Challan Row Count 3232
+03/06/2019 10:52:54 : currentPageIndex == 1
+03/06/2019 10:52:54 : == UpdateStatus1 Ends ==
+03/06/2019 10:52:54 : After UpdateStatus1
+03/06/2019 10:52:54 : (rptTempChallan.Items.Count 10
+03/06/2019 10:52:54 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 10:52:54 : Step 4
+03/06/2019 10:52:54 : ===  showTempChallan() END ===
+03/06/2019 15:23:57 : ===  showTempChallan() START ===
+03/06/2019 15:23:57 : Step 1 Before GetAutoChallanCount()
+03/06/2019 15:23:57 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 15:23:57 : Step 3 Before SaveChallaninTemp()
+03/06/2019 15:24:02 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 15:24:02 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 15:24:02 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 15:24:02 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 15:24:02 : challans.Count : 10
+03/06/2019 15:24:02 : After rptTempChallan.DataSource
+03/06/2019 15:24:02 : Before UpdateStatus1
+03/06/2019 15:24:02 : === Inside UpdateStatus1 ===
+03/06/2019 15:24:02 : Step 1
+03/06/2019 15:24:02 : total Challan Row Count 3232
+03/06/2019 15:24:02 : currentPageIndex == 1
+03/06/2019 15:24:02 : == UpdateStatus1 Ends ==
+03/06/2019 15:24:02 : After UpdateStatus1
+03/06/2019 15:24:02 : (rptTempChallan.Items.Count 10
+03/06/2019 15:24:02 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 15:24:02 : Step 4
+03/06/2019 15:24:02 : ===  showTempChallan() END ===
+03/06/2019 15:32:21 : ===  showTempChallan() START ===
+03/06/2019 15:32:21 : Step 1 Before GetAutoChallanCount()
+03/06/2019 15:32:21 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 15:32:21 : Step 3 Before SaveChallaninTemp()
+03/06/2019 15:32:23 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 15:32:23 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 15:32:23 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 15:32:23 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 15:32:23 : No Records found for selected month.
+03/06/2019 15:32:23 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 15:32:23 : Step 4
+03/06/2019 15:32:23 : ===  showTempChallan() END ===
+03/06/2019 15:32:31 : ===  showTempChallan() START ===
+03/06/2019 15:32:31 : Step 1 Before GetAutoChallanCount()
+03/06/2019 15:32:31 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 15:32:31 : Step 3 Before SaveChallaninTemp()
+03/06/2019 15:32:38 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 15:32:38 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 15:32:38 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 15:32:38 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 15:32:38 : challans.Count : 10
+03/06/2019 15:32:38 : After rptTempChallan.DataSource
+03/06/2019 15:32:38 : Before UpdateStatus1
+03/06/2019 15:32:38 : === Inside UpdateStatus1 ===
+03/06/2019 15:32:38 : Step 1
+03/06/2019 15:32:38 : total Challan Row Count 3232
+03/06/2019 15:32:38 : currentPageIndex == 1
+03/06/2019 15:32:38 : == UpdateStatus1 Ends ==
+03/06/2019 15:32:38 : After UpdateStatus1
+03/06/2019 15:32:38 : (rptTempChallan.Items.Count 10
+03/06/2019 15:32:38 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 15:32:38 : Step 4
+03/06/2019 15:32:38 : ===  showTempChallan() END ===
+03/06/2019 16:15:25 : ===  showTempChallan() START ===
+03/06/2019 16:15:25 : Step 1 Before GetAutoChallanCount()
+03/06/2019 16:15:25 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 16:15:25 : Step 3 Before SaveChallaninTemp()
+03/06/2019 16:15:31 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 16:15:31 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 16:15:31 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 16:15:31 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 16:15:31 : challans.Count : 10
+03/06/2019 16:15:31 : After rptTempChallan.DataSource
+03/06/2019 16:15:31 : Before UpdateStatus1
+03/06/2019 16:15:31 : === Inside UpdateStatus1 ===
+03/06/2019 16:15:31 : Step 1
+03/06/2019 16:15:31 : total Challan Row Count 3232
+03/06/2019 16:15:31 : currentPageIndex == 1
+03/06/2019 16:15:31 : == UpdateStatus1 Ends ==
+03/06/2019 16:15:31 : After UpdateStatus1
+03/06/2019 16:15:31 : (rptTempChallan.Items.Count 10
+03/06/2019 16:15:31 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 16:15:31 : Step 4
+03/06/2019 16:15:31 : ===  showTempChallan() END ===
+03/06/2019 16:15:49 : ===  btnCreateAll_Click START ===
+03/06/2019 16:15:49 : Step 1 Before SaveChallanForPayment()
+03/06/2019 16:15:56 : Step 2 details Initiate Bulk Makepayment clicked by K4030 on 03/06/2019 16:15:56 for month May
+03/06/2019 16:15:56 : Step 3 Before LoadLockedDedDetails()
+03/06/2019 16:15:57 : Step 3 After LoadLockedDedDetails()
+03/06/2019 16:15:57 : Step 4 Before GetBulkDedDetailsMonthwiseCount()
+03/06/2019 16:15:57 : Step 4 After GetBulkDedDetailsMonthwiseCount()
+03/06/2019 16:15:57 : Step 5 Before UpdateStatus()
+03/06/2019 16:15:57 : Step 5 After UpdateStatus()
+03/06/2019 16:15:57 : Step 6 Before NullChallanNoExist()
+03/06/2019 16:15:59 : Step 7 IF NullChallanNoExist()
+03/06/2019 16:15:59 : Step 8
+03/06/2019 16:15:59 : Step 9
+03/06/2019 16:15:59 : ===  btnCreateAll_Click END ===
+03/06/2019 16:16:07 : Before IsOltasBlocked()
+03/06/2019 16:16:07 : After IsOltasBlocked()
+03/06/2019 16:16:07 : Before GetRT01Data()
+03/06/2019 16:16:08 : After GetRT01Data()
+03/06/2019 16:16:08 : Before GetTTUMData()
+03/06/2019 16:16:08 : After GetTTUMData()
+03/06/2019 16:16:08 : Before GetTTUMMonthList()
+03/06/2019 16:16:55 : Before IsOltasBlocked()
+03/06/2019 16:16:55 : After IsOltasBlocked()
+03/06/2019 16:16:55 : Before GetRT01Data()
+03/06/2019 16:16:55 : After GetRT01Data()
+03/06/2019 16:16:55 : Before GetTTUMData()
+03/06/2019 16:16:55 : After GetTTUMData()
+03/06/2019 16:16:55 : Before GetTTUMMonthList()
+03/06/2019 16:53:28 : ===  showTempChallan() START ===
+03/06/2019 16:53:28 : Step 1 Before GetAutoChallanCount()
+03/06/2019 16:53:28 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 16:53:28 : Step 3 Before SaveChallaninTemp()
+03/06/2019 16:53:29 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 16:53:29 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 16:53:29 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 16:53:29 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 16:53:29 : No Records found for selected month.
+03/06/2019 16:53:29 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 16:53:29 : Step 4
+03/06/2019 16:53:29 : ===  showTempChallan() END ===
+03/06/2019 16:53:58 : Before IsOltasBlocked()
+03/06/2019 16:53:58 : After IsOltasBlocked()
+03/06/2019 16:53:58 : Before GetRT01Data()
+03/06/2019 16:53:58 : After GetRT01Data()
+03/06/2019 16:53:58 : Before GetTTUMData()
+03/06/2019 16:53:58 : After GetTTUMData()
+03/06/2019 16:53:58 : Before GetTTUMMonthList()
+03/06/2019 16:54:22 : ===  showTempChallan() START ===
+03/06/2019 16:54:22 : Step 1 Before GetAutoChallanCount()
+03/06/2019 16:54:22 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 16:54:22 : Step 3 Before SaveChallaninTemp()
+03/06/2019 16:54:23 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 16:54:23 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 16:54:23 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 16:54:23 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 16:54:23 : No Records found for selected month.
+03/06/2019 16:54:23 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 16:54:23 : Step 4
+03/06/2019 16:54:23 : ===  showTempChallan() END ===
+03/06/2019 16:54:31 : Before IsOltasBlocked()
+03/06/2019 16:54:31 : After IsOltasBlocked()
+03/06/2019 16:54:31 : Before GetRT01Data()
+03/06/2019 16:54:32 : After GetRT01Data()
+03/06/2019 16:54:32 : Before GetTTUMData()
+03/06/2019 16:54:32 : After GetTTUMData()
+03/06/2019 16:54:32 : Before GetTTUMMonthList()
+03/06/2019 16:55:01 : Before IsOltasBlocked()
+03/06/2019 16:55:01 : After IsOltasBlocked()
+03/06/2019 16:55:01 : Before GetRT01Data()
+03/06/2019 16:55:01 : After GetRT01Data()
+03/06/2019 16:55:01 : Before GetTTUMData()
+03/06/2019 16:55:01 : After GetTTUMData()
+03/06/2019 16:55:01 : Before GetTTUMMonthList()
+03/06/2019 16:55:17 : Before IsOltasBlocked()
+03/06/2019 16:55:17 : After IsOltasBlocked()
+03/06/2019 16:55:17 : Before GetRT01Data()
+03/06/2019 16:55:18 : After GetRT01Data()
+03/06/2019 16:55:18 : Before GetTTUMData()
+03/06/2019 16:55:18 : After GetTTUMData()
+03/06/2019 16:55:18 : Before GetTTUMMonthList()
+03/06/2019 18:06:05 : ===  showTempChallan() START ===
+03/06/2019 18:06:05 : Step 1 Before GetAutoChallanCount()
+03/06/2019 18:06:05 : Step 2 GetAutoChallanCount() = 0
+03/06/2019 18:06:05 : Step 3 Before SaveChallaninTemp()
+03/06/2019 18:06:06 : Step 3 After SaveChallaninTemp().. result : 1
+03/06/2019 18:06:06 : ==== LoadTempChallanDetails() - START ====
+03/06/2019 18:06:06 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 18:06:06 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/06/2019 18:06:06 : No Records found for selected month.
+03/06/2019 18:06:06 : ==== LoadTempChallanDetails() - END ====
+03/06/2019 18:06:06 : Step 4
+03/06/2019 18:06:06 : ===  showTempChallan() END ===
+03/06/2019 18:06:17 : Before IsOltasBlocked()
+03/06/2019 18:06:17 : After IsOltasBlocked()
+03/06/2019 18:06:17 : Before GetRT01Data()
+03/06/2019 18:06:17 : After GetRT01Data()
+03/06/2019 18:06:17 : Before GetTTUMData()
+03/06/2019 18:06:17 : After GetTTUMData()
+03/06/2019 18:06:17 : Before GetTTUMMonthList()
+03/06/2019 18:06:17 : After GetTTUMMonthList()
+03/06/2019 18:06:17 : Before SetOltasStatus()
+03/06/2019 18:06:18 : After SetOltasStatus()
+03/06/2019 18:06:21 : ==== btnGenerateOltas - START ====
+03/06/2019 18:06:21 : ==== GenerateFilesForKB :  START===
+03/06/2019 18:06:21 : Step 1 BranchID : 1
+03/06/2019 18:06:21 : Step 2
+03/06/2019 18:06:21 : Step 3 Before GetIBOltasfile()
+03/06/2019 18:06:21 : Step 3 After GetIBOltasfile()
+03/06/2019 18:06:21 : Step 4 Before RT01 While Loop
+03/06/2019 18:06:21 : Step 5 After RT01 While Loop()
+03/06/2019 18:06:21 : Step 6 details : OLTAS File 03061930.029 is Created by K4030 on 03/06/2019 18:06:21
+03/06/2019 18:06:21 : Step 7 Before SaveOltasDetails()
+03/06/2019 18:06:21 : Step 8 After SaveOltasDetails()Before SaveRTFileNo()
+03/06/2019 18:06:21 : Step 9 After SaveRTFileNo()
+03/06/2019 18:06:21 : Step 10 . Setting downloading path.
+03/06/2019 18:06:21 : Step 11 . Before SetOltasStatus(). ddlMonth.SelectedValue : 5
+03/06/2019 18:06:21 : Step 11 . After SetOltasStatus()
+03/06/2019 18:06:21 : Step 12 . End GenerateFilesforKB()
+03/06/2019 18:06:21 : Step 55
+03/06/2019 18:06:21 : Step 56
+03/06/2019 18:06:21 : ==== btnGenerateOltas_Click == END===
+02/07/2019 16:03:23 : ===  showTempChallan() START ===
+02/07/2019 16:03:23 : Step 1 Before GetAutoChallanCount()
+02/07/2019 16:03:23 : Step 2 GetAutoChallanCount() = 0
+02/07/2019 16:03:23 : Step 3 Before SaveChallaninTemp()
+02/07/2019 16:03:29 : Step 3 After SaveChallaninTemp().. result : 1
+02/07/2019 16:03:29 : ==== LoadTempChallanDetails() - START ====
+02/07/2019 16:03:29 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+02/07/2019 16:03:29 : After ChallanFacade().GetTempChallanDetails(1, 10)
+02/07/2019 16:03:29 : challans.Count : 10
+02/07/2019 16:03:29 : After rptTempChallan.DataSource
+02/07/2019 16:03:29 : Before UpdateStatus1
+02/07/2019 16:03:29 : === Inside UpdateStatus1 ===
+02/07/2019 16:03:29 : Step 1
+02/07/2019 16:03:29 : total Challan Row Count 3654
+02/07/2019 16:03:29 : currentPageIndex == 1
+02/07/2019 16:03:29 : == UpdateStatus1 Ends ==
+02/07/2019 16:03:29 : After UpdateStatus1
+02/07/2019 16:03:29 : (rptTempChallan.Items.Count 10
+02/07/2019 16:03:29 : ==== LoadTempChallanDetails() - END ====
+02/07/2019 16:03:29 : Step 4
+02/07/2019 16:03:29 : ===  showTempChallan() END ===
+03/07/2019 12:45:27 : ===  showTempChallan() START ===
+03/07/2019 12:45:27 : Step 1 Before GetAutoChallanCount()
+03/07/2019 12:45:27 : Step 2 GetAutoChallanCount() = 0
+03/07/2019 12:45:27 : Step 3 Before SaveChallaninTemp()
+03/07/2019 12:45:31 : Step 3 After SaveChallaninTemp().. result : 1
+03/07/2019 12:45:31 : ==== LoadTempChallanDetails() - START ====
+03/07/2019 12:45:31 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/07/2019 12:45:31 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/07/2019 12:45:31 : challans.Count : 10
+03/07/2019 12:45:31 : After rptTempChallan.DataSource
+03/07/2019 12:45:31 : Before UpdateStatus1
+03/07/2019 12:45:31 : === Inside UpdateStatus1 ===
+03/07/2019 12:45:31 : Step 1
+03/07/2019 12:45:31 : total Challan Row Count 3654
+03/07/2019 12:45:31 : currentPageIndex == 1
+03/07/2019 12:45:31 : == UpdateStatus1 Ends ==
+03/07/2019 12:45:31 : After UpdateStatus1
+03/07/2019 12:45:31 : (rptTempChallan.Items.Count 10
+03/07/2019 12:45:31 : ==== LoadTempChallanDetails() - END ====
+03/07/2019 12:45:31 : Step 4
+03/07/2019 12:45:31 : ===  showTempChallan() END ===
+03/07/2019 12:47:51 : ===  btnCreateAll_Click START ===
+03/07/2019 12:47:51 : Step 1 Before SaveChallanForPayment()
+03/07/2019 12:47:58 : Step 2 details Initiate Bulk Makepayment clicked by K4030 on 03/07/2019 12:47:58 for month June
+03/07/2019 12:47:58 : Step 3 Before LoadLockedDedDetails()
+03/07/2019 12:47:59 : Step 3 After LoadLockedDedDetails()
+03/07/2019 12:47:59 : Step 4 Before GetBulkDedDetailsMonthwiseCount()
+03/07/2019 12:47:59 : Step 4 After GetBulkDedDetailsMonthwiseCount()
+03/07/2019 12:47:59 : Step 5 Before UpdateStatus()
+03/07/2019 12:47:59 : Step 5 After UpdateStatus()
+03/07/2019 12:47:59 : Step 6 Before NullChallanNoExist()
+03/07/2019 12:48:00 : Step 7 IF NullChallanNoExist()
+03/07/2019 12:48:00 : Step 8
+03/07/2019 12:48:00 : Step 9
+03/07/2019 12:48:00 : ===  btnCreateAll_Click END ===
+03/07/2019 12:48:09 : Before IsOltasBlocked()
+03/07/2019 12:48:09 : After IsOltasBlocked()
+03/07/2019 12:48:09 : Before GetRT01Data()
+03/07/2019 12:48:09 : After GetRT01Data()
+03/07/2019 12:48:09 : Before GetTTUMData()
+03/07/2019 12:48:09 : After GetTTUMData()
+03/07/2019 12:48:09 : Before GetTTUMMonthList()
+03/07/2019 12:48:10 : After GetTTUMMonthList()
+03/07/2019 12:48:10 : Before SetOltasStatus()
+03/07/2019 12:48:10 : After SetOltasStatus()
+03/07/2019 12:49:42 : ==== btnGenerateOltas - START ====
+03/07/2019 12:49:42 : ==== GenerateFilesForKB :  START===
+03/07/2019 12:49:42 : Step 1 BranchID : 1
+03/07/2019 12:49:42 : Step 2
+03/07/2019 12:49:42 : Step 3 Before GetIBOltasfile()
+03/07/2019 12:49:42 : Step 3 After GetIBOltasfile()
+03/07/2019 12:49:42 : Step 4 Before RT01 While Loop
+03/07/2019 12:49:42 : Step 5 After RT01 While Loop()
+03/07/2019 12:49:42 : Step 6 details : OLTAS File 03071930.029 is Created by K4030 on 03/07/2019 12:49:42
+03/07/2019 12:49:42 : Step 7 Before SaveOltasDetails()
+03/07/2019 12:49:42 : Step 8 After SaveOltasDetails()Before SaveRTFileNo()
+03/07/2019 12:49:42 : Step 9 After SaveRTFileNo()
+03/07/2019 12:49:42 : Step 10 . Setting downloading path.
+03/07/2019 12:49:42 : Step 11 . Before SetOltasStatus(). ddlMonth.SelectedValue : 6
+03/07/2019 12:49:42 : Step 11 . After SetOltasStatus()
+03/07/2019 12:49:42 : Step 12 . End GenerateFilesforKB()
+03/07/2019 12:49:42 : Step 55
+03/07/2019 12:49:42 : Step 56
+03/07/2019 12:49:42 : ==== btnGenerateOltas_Click == END===
+02/08/2019 17:17:07 : === bulkMakePayment_Click Start ===
+02/08/2019 17:17:07 : ===  showTempChallan() START ===
+02/08/2019 17:17:07 : Step 1 Before GetAutoChallanCount()
+02/08/2019 17:17:07 : Step 2 GetAutoChallanCount() = 0
+02/08/2019 17:17:07 : Step 3 Before SaveChallaninTemp()
+02/08/2019 17:17:22 : Step 3 After SaveChallaninTemp().. result : 1
+02/08/2019 17:17:22 : ==== LoadTempChallanDetails() - START ====
+02/08/2019 17:17:22 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+02/08/2019 17:17:22 : After ChallanFacade().GetTempChallanDetails(1, 10)
+02/08/2019 17:17:22 : challans.Count : 10
+02/08/2019 17:17:22 : After rptTempChallan.DataSource
+02/08/2019 17:17:22 : Before UpdateStatus1
+02/08/2019 17:17:22 : === Inside UpdateStatus1 ===
+02/08/2019 17:17:22 : Step 1
+02/08/2019 17:17:22 : total Challan Row Count 3688
+02/08/2019 17:17:22 : currentPageIndex == 1
+02/08/2019 17:17:22 : == UpdateStatus1 Ends ==
+02/08/2019 17:17:22 : After UpdateStatus1
+02/08/2019 17:17:22 : (rptTempChallan.Items.Count 10
+02/08/2019 17:17:22 : ==== LoadTempChallanDetails() - END ====
+02/08/2019 17:17:22 : Step 4
+02/08/2019 17:17:22 : ===  showTempChallan() END ===
+02/08/2019 17:17:22 : === bulkMakePayment_Click  End===
+02/08/2019 19:09:14 : === bulkMakePayment_Click Start ===
+02/08/2019 19:09:14 : ===  showTempChallan() START ===
+02/08/2019 19:09:14 : Step 1 Before GetAutoChallanCount()
+02/08/2019 19:09:14 : Step 2 GetAutoChallanCount() = 0
+02/08/2019 19:09:14 : Step 3 Before SaveChallaninTemp()
+02/08/2019 19:09:29 : Step 3 After SaveChallaninTemp().. result : 1
+02/08/2019 19:09:29 : ==== LoadTempChallanDetails() - START ====
+02/08/2019 19:09:29 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+02/08/2019 19:09:29 : After ChallanFacade().GetTempChallanDetails(1, 10)
+02/08/2019 19:09:29 : challans.Count : 10
+02/08/2019 19:09:29 : After rptTempChallan.DataSource
+02/08/2019 19:09:29 : Before UpdateStatus1
+02/08/2019 19:09:29 : === Inside UpdateStatus1 ===
+02/08/2019 19:09:29 : Step 1
+02/08/2019 19:09:29 : total Challan Row Count 3688
+02/08/2019 19:09:29 : currentPageIndex == 1
+02/08/2019 19:09:29 : == UpdateStatus1 Ends ==
+02/08/2019 19:09:29 : After UpdateStatus1
+02/08/2019 19:09:29 : (rptTempChallan.Items.Count 10
+02/08/2019 19:09:29 : ==== LoadTempChallanDetails() - END ====
+02/08/2019 19:09:29 : Step 4
+02/08/2019 19:09:29 : ===  showTempChallan() END ===
+02/08/2019 19:09:29 : === bulkMakePayment_Click  End===
+03/08/2019 14:50:58 : === bulkMakePayment_Click Start ===
+03/08/2019 14:50:58 : ===  showTempChallan() START ===
+03/08/2019 14:50:58 : Step 1 Before GetAutoChallanCount()
+03/08/2019 14:50:58 : Step 2 GetAutoChallanCount() = 0
+03/08/2019 14:50:58 : Step 3 Before SaveChallaninTemp()
+03/08/2019 14:51:12 : Step 3 After SaveChallaninTemp().. result : 1
+03/08/2019 14:51:12 : ==== LoadTempChallanDetails() - START ====
+03/08/2019 14:51:12 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+03/08/2019 14:51:12 : After ChallanFacade().GetTempChallanDetails(1, 10)
+03/08/2019 14:51:12 : challans.Count : 10
+03/08/2019 14:51:12 : After rptTempChallan.DataSource
+03/08/2019 14:51:12 : Before UpdateStatus1
+03/08/2019 14:51:12 : === Inside UpdateStatus1 ===
+03/08/2019 14:51:12 : Step 1
+03/08/2019 14:51:12 : total Challan Row Count 3687
+03/08/2019 14:51:12 : currentPageIndex == 1
+03/08/2019 14:51:12 : == UpdateStatus1 Ends ==
+03/08/2019 14:51:12 : After UpdateStatus1
+03/08/2019 14:51:12 : (rptTempChallan.Items.Count 10
+03/08/2019 14:51:12 : ==== LoadTempChallanDetails() - END ====
+03/08/2019 14:51:12 : Step 4
+03/08/2019 14:51:12 : ===  showTempChallan() END ===
+03/08/2019 14:51:12 : === bulkMakePayment_Click  End===
+03/08/2019 14:59:06 : ===  btnCreateAll_Click START ===
+03/08/2019 14:59:06 : Step 1 Before SaveChallanForPayment()
+03/08/2019 14:59:37 : Step 2 details Initiate Bulk Makepayment clicked by K4030 on 03/08/2019 14:59:37 for month July
+03/08/2019 14:59:37 : Step 3 Before LoadLockedDedDetails()
+03/08/2019 14:59:38 : Step 3 After LoadLockedDedDetails()
+03/08/2019 14:59:38 : Step 4 Before GetBulkDedDetailsMonthwiseCount()
+03/08/2019 14:59:39 : Step 4 After GetBulkDedDetailsMonthwiseCount()
+03/08/2019 14:59:39 : Step 5 Before UpdateStatus()
+03/08/2019 14:59:39 : Step 5 After UpdateStatus()
+03/08/2019 14:59:39 : Step 6 Before NullChallanNoExist()
+03/08/2019 14:59:44 : Step 7 IF NullChallanNoExist()
+03/08/2019 14:59:44 : Step 8
+03/08/2019 14:59:44 : Step 9
+03/08/2019 14:59:44 : ===  btnCreateAll_Click END ===
+03/08/2019 14:59:53 : Before IsOltasBlocked()
+03/08/2019 14:59:53 : After IsOltasBlocked()
+03/08/2019 14:59:53 : Before GetRT01Data()
+03/08/2019 14:59:54 : After GetRT01Data()
+03/08/2019 14:59:54 : Before GetTTUMData()
+03/08/2019 14:59:54 : After GetTTUMData()
+03/08/2019 14:59:54 : Before GetTTUMMonthList()
+03/08/2019 14:59:55 : After GetTTUMMonthList()
+03/08/2019 14:59:55 : Before SetOltasStatus()
+03/08/2019 14:59:56 : After SetOltasStatus()
+03/08/2019 15:00:47 : ==== btnGenerateOltas - START ====
+03/08/2019 15:00:47 : ==== GenerateFilesForKB :  START===
+03/08/2019 15:00:47 : Step 1 BranchID : 1
+03/08/2019 15:00:47 : Step 2
+03/08/2019 15:00:47 : Step 3 Before GetIBOltasfile()
+03/08/2019 15:00:47 : Step 3 After GetIBOltasfile()
+03/08/2019 15:00:47 : Step 4 Before RT01 While Loop
+03/08/2019 15:00:47 : Step 5 After RT01 While Loop()
+03/08/2019 15:00:47 : Step 6 details : OLTAS File 03081930.029 is Created by K4030 on 03/08/2019 15:00:47
+03/08/2019 15:00:47 : Step 7 Before SaveOltasDetails()
+03/08/2019 15:00:47 : Step 8 After SaveOltasDetails()Before SaveRTFileNo()
+03/08/2019 15:00:48 : Step 9 After SaveRTFileNo()
+03/08/2019 15:00:48 : Step 10 . Setting downloading path.
+03/08/2019 15:00:48 : Step 11 . Before SetOltasStatus(). ddlMonth.SelectedValue : 7
+03/08/2019 15:00:49 : Step 11 . After SetOltasStatus()
+03/08/2019 15:00:49 : Step 12 . End GenerateFilesforKB()
+03/08/2019 15:00:49 : Step 55
+03/08/2019 15:00:49 : Step 56
+03/08/2019 15:00:49 : ==== btnGenerateOltas_Click == END===
+04/09/2019 14:16:41 : === bulkMakePayment_Click Start ===
+04/09/2019 14:16:41 : ===  showTempChallan() START ===
+04/09/2019 14:16:41 : Step 1 Before GetAutoChallanCount()
+04/09/2019 14:16:41 : Step 2 GetAutoChallanCount() = 0
+04/09/2019 14:16:41 : Step 3 Before SaveChallaninTemp()
+04/09/2019 14:16:57 : Step 3 After SaveChallaninTemp().. result : 1
+04/09/2019 14:16:57 : ==== LoadTempChallanDetails() - START ====
+04/09/2019 14:16:57 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/09/2019 14:16:57 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/09/2019 14:16:57 : challans.Count : 10
+04/09/2019 14:16:57 : After rptTempChallan.DataSource
+04/09/2019 14:16:57 : Before UpdateStatus1
+04/09/2019 14:16:57 : === Inside UpdateStatus1 ===
+04/09/2019 14:16:57 : Step 1
+04/09/2019 14:16:57 : total Challan Row Count 3314
+04/09/2019 14:16:57 : currentPageIndex == 1
+04/09/2019 14:16:57 : == UpdateStatus1 Ends ==
+04/09/2019 14:16:57 : After UpdateStatus1
+04/09/2019 14:16:57 : (rptTempChallan.Items.Count 10
+04/09/2019 14:16:57 : ==== LoadTempChallanDetails() - END ====
+04/09/2019 14:16:57 : Step 4
+04/09/2019 14:16:57 : ===  showTempChallan() END ===
+04/09/2019 14:16:57 : === bulkMakePayment_Click  End===
+05/09/2019 10:46:56 : === bulkMakePayment_Click Start ===
+05/09/2019 10:46:56 : ===  showTempChallan() START ===
+05/09/2019 10:46:56 : Step 1 Before GetAutoChallanCount()
+05/09/2019 10:46:56 : Step 2 GetAutoChallanCount() = 0
+05/09/2019 10:46:56 : Step 3 Before SaveChallaninTemp()
+05/09/2019 10:47:06 : Step 3 After SaveChallaninTemp().. result : 1
+05/09/2019 10:47:06 : ==== LoadTempChallanDetails() - START ====
+05/09/2019 10:47:06 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+05/09/2019 10:47:06 : After ChallanFacade().GetTempChallanDetails(1, 10)
+05/09/2019 10:47:06 : challans.Count : 10
+05/09/2019 10:47:06 : After rptTempChallan.DataSource
+05/09/2019 10:47:06 : Before UpdateStatus1
+05/09/2019 10:47:06 : === Inside UpdateStatus1 ===
+05/09/2019 10:47:06 : Step 1
+05/09/2019 10:47:06 : total Challan Row Count 3313
+05/09/2019 10:47:06 : currentPageIndex == 1
+05/09/2019 10:47:06 : == UpdateStatus1 Ends ==
+05/09/2019 10:47:06 : After UpdateStatus1
+05/09/2019 10:47:06 : (rptTempChallan.Items.Count 10
+05/09/2019 10:47:06 : ==== LoadTempChallanDetails() - END ====
+05/09/2019 10:47:06 : Step 4
+05/09/2019 10:47:06 : ===  showTempChallan() END ===
+05/09/2019 10:47:06 : === bulkMakePayment_Click  End===
+05/09/2019 11:02:13 : === bulkMakePayment_Click Start ===
+05/09/2019 11:02:13 : ===  showTempChallan() START ===
+05/09/2019 11:02:13 : Step 1 Before GetAutoChallanCount()
+05/09/2019 11:02:13 : Step 2 GetAutoChallanCount() = 0
+05/09/2019 11:02:13 : Step 3 Before SaveChallaninTemp()
+05/09/2019 11:02:22 : Step 3 After SaveChallaninTemp().. result : 1
+05/09/2019 11:02:22 : ==== LoadTempChallanDetails() - START ====
+05/09/2019 11:02:22 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+05/09/2019 11:02:22 : After ChallanFacade().GetTempChallanDetails(1, 10)
+05/09/2019 11:02:22 : challans.Count : 10
+05/09/2019 11:02:22 : After rptTempChallan.DataSource
+05/09/2019 11:02:22 : Before UpdateStatus1
+05/09/2019 11:02:22 : === Inside UpdateStatus1 ===
+05/09/2019 11:02:22 : Step 1
+05/09/2019 11:02:22 : total Challan Row Count 3313
+05/09/2019 11:02:22 : currentPageIndex == 1
+05/09/2019 11:02:22 : == UpdateStatus1 Ends ==
+05/09/2019 11:02:22 : After UpdateStatus1
+05/09/2019 11:02:22 : (rptTempChallan.Items.Count 10
+05/09/2019 11:02:22 : ==== LoadTempChallanDetails() - END ====
+05/09/2019 11:02:22 : Step 4
+05/09/2019 11:02:22 : ===  showTempChallan() END ===
+05/09/2019 11:02:22 : === bulkMakePayment_Click  End===
+05/09/2019 11:02:28 : ===  btnCreateAll_Click START ===
+05/09/2019 11:02:28 : Step 1 Before SaveChallanForPayment()
+05/09/2019 11:02:43 : Step 2 details Initiate Bulk Makepayment clicked by K4030 on 05/09/2019 11:02:43 for month August
+05/09/2019 11:02:43 : Step 3 Before LoadLockedDedDetails()
+05/09/2019 11:02:44 : Step 3 After LoadLockedDedDetails()
+05/09/2019 11:02:44 : Step 4 Before GetBulkDedDetailsMonthwiseCount()
+05/09/2019 11:02:46 : Step 4 After GetBulkDedDetailsMonthwiseCount()
+05/09/2019 11:02:46 : Step 5 Before UpdateStatus()
+05/09/2019 11:02:46 : Step 5 After UpdateStatus()
+05/09/2019 11:02:46 : Step 6 Before NullChallanNoExist()
+05/09/2019 11:02:48 : Step 7 IF NullChallanNoExist()
+05/09/2019 11:02:48 : Step 8
+05/09/2019 11:02:48 : Step 9
+05/09/2019 11:02:48 : ===  btnCreateAll_Click END ===
+05/09/2019 11:02:57 : Before IsOltasBlocked()
+05/09/2019 11:02:57 : After IsOltasBlocked()
+05/09/2019 11:02:57 : Before GetRT01Data()
+05/09/2019 11:02:58 : After GetRT01Data()
+05/09/2019 11:02:58 : Before GetTTUMData()
+05/09/2019 11:02:59 : After GetTTUMData()
+05/09/2019 11:02:59 : Before GetTTUMMonthList()
+05/09/2019 11:03:00 : After GetTTUMMonthList()
+05/09/2019 11:03:00 : Before SetOltasStatus()
+05/09/2019 11:03:01 : After SetOltasStatus()
+05/09/2019 11:04:54 : ==== btnGenerateOltas - START ====
+05/09/2019 11:04:54 : ==== GenerateFilesForKB :  START===
+05/09/2019 11:04:54 : Step 1 BranchID : 1
+05/09/2019 11:04:54 : Step 2
+05/09/2019 11:04:54 : Step 3 Before GetIBOltasfile()
+05/09/2019 11:04:54 : Step 3 After GetIBOltasfile()
+05/09/2019 11:04:54 : Step 4 Before RT01 While Loop
+05/09/2019 11:04:54 : Step 5 After RT01 While Loop()
+05/09/2019 11:04:54 : Step 6 details : OLTAS File 05091930.029 is Created by K4030 on 05/09/2019 11:04:54
+05/09/2019 11:04:54 : Step 7 Before SaveOltasDetails()
+05/09/2019 11:04:55 : Step 8 After SaveOltasDetails()Before SaveRTFileNo()
+05/09/2019 11:04:55 : Step 9 After SaveRTFileNo()
+05/09/2019 11:04:55 : Step 10 . Setting downloading path.
+05/09/2019 11:04:55 : Step 11 . Before SetOltasStatus(). ddlMonth.SelectedValue : 8
+05/09/2019 11:04:55 : Step 11 . After SetOltasStatus()
+05/09/2019 11:04:55 : Step 12 . End GenerateFilesforKB()
+05/09/2019 11:04:55 : Step 55
+05/09/2019 11:04:55 : Step 56
+05/09/2019 11:04:55 : ==== btnGenerateOltas_Click == END===
+04/10/2019 11:08:39 : === bulkMakePayment_Click Start ===
+04/10/2019 11:08:39 : ===  showTempChallan() START ===
+04/10/2019 11:08:39 : Step 1 Before GetAutoChallanCount()
+04/10/2019 11:08:39 : Step 2 GetAutoChallanCount() = 0
+04/10/2019 11:08:39 : Step 3 Before SaveChallaninTemp()
+04/10/2019 11:08:57 : Step 3 After SaveChallaninTemp().. result : 1
+04/10/2019 11:08:57 : ==== LoadTempChallanDetails() - START ====
+04/10/2019 11:08:57 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 11:08:57 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 11:08:57 : challans.Count : 10
+04/10/2019 11:08:57 : After rptTempChallan.DataSource
+04/10/2019 11:08:57 : Before UpdateStatus1
+04/10/2019 11:08:57 : === Inside UpdateStatus1 ===
+04/10/2019 11:08:57 : Step 1
+04/10/2019 11:08:57 : total Challan Row Count 4288
+04/10/2019 11:08:57 : currentPageIndex == 1
+04/10/2019 11:08:57 : == UpdateStatus1 Ends ==
+04/10/2019 11:08:57 : After UpdateStatus1
+04/10/2019 11:08:57 : (rptTempChallan.Items.Count 10
+04/10/2019 11:08:57 : ==== LoadTempChallanDetails() - END ====
+04/10/2019 11:08:57 : Step 4
+04/10/2019 11:08:57 : ===  showTempChallan() END ===
+04/10/2019 11:08:57 : === bulkMakePayment_Click  End===
+04/10/2019 14:00:05 : === bulkMakePayment_Click Start ===
+04/10/2019 14:00:05 : ===  showTempChallan() START ===
+04/10/2019 14:00:05 : Step 1 Before GetAutoChallanCount()
+04/10/2019 14:00:05 : Step 2 GetAutoChallanCount() = 0
+04/10/2019 14:00:05 : Step 3 Before SaveChallaninTemp()
+04/10/2019 14:00:21 : Step 3 After SaveChallaninTemp().. result : 1
+04/10/2019 14:00:21 : ==== LoadTempChallanDetails() - START ====
+04/10/2019 14:00:21 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 14:00:21 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 14:00:21 : challans.Count : 10
+04/10/2019 14:00:21 : After rptTempChallan.DataSource
+04/10/2019 14:00:21 : Before UpdateStatus1
+04/10/2019 14:00:21 : === Inside UpdateStatus1 ===
+04/10/2019 14:00:21 : Step 1
+04/10/2019 14:00:21 : total Challan Row Count 4340
+04/10/2019 14:00:21 : currentPageIndex == 1
+04/10/2019 14:00:21 : == UpdateStatus1 Ends ==
+04/10/2019 14:00:21 : After UpdateStatus1
+04/10/2019 14:00:21 : (rptTempChallan.Items.Count 10
+04/10/2019 14:00:21 : ==== LoadTempChallanDetails() - END ====
+04/10/2019 14:00:21 : Step 4
+04/10/2019 14:00:21 : ===  showTempChallan() END ===
+04/10/2019 14:00:21 : === bulkMakePayment_Click  End===
+04/10/2019 15:33:54 : === bulkMakePayment_Click Start ===
+04/10/2019 15:33:54 : ===  showTempChallan() START ===
+04/10/2019 15:33:54 : Step 1 Before GetAutoChallanCount()
+04/10/2019 15:33:54 : Step 2 GetAutoChallanCount() = 0
+04/10/2019 15:33:54 : Step 3 Before SaveChallaninTemp()
+04/10/2019 15:34:09 : Step 3 After SaveChallaninTemp().. result : 1
+04/10/2019 15:34:09 : ==== LoadTempChallanDetails() - START ====
+04/10/2019 15:34:09 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 15:34:09 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 15:34:09 : challans.Count : 10
+04/10/2019 15:34:09 : After rptTempChallan.DataSource
+04/10/2019 15:34:09 : Before UpdateStatus1
+04/10/2019 15:34:09 : === Inside UpdateStatus1 ===
+04/10/2019 15:34:09 : Step 1
+04/10/2019 15:34:09 : total Challan Row Count 4340
+04/10/2019 15:34:09 : currentPageIndex == 1
+04/10/2019 15:34:09 : == UpdateStatus1 Ends ==
+04/10/2019 15:34:10 : After UpdateStatus1
+04/10/2019 15:34:10 : (rptTempChallan.Items.Count 10
+04/10/2019 15:34:10 : ==== LoadTempChallanDetails() - END ====
+04/10/2019 15:34:10 : Step 4
+04/10/2019 15:34:10 : ===  showTempChallan() END ===
+04/10/2019 15:34:10 : === bulkMakePayment_Click  End===
+04/10/2019 15:59:31 : === bulkMakePayment_Click Start ===
+04/10/2019 15:59:31 : ===  showTempChallan() START ===
+04/10/2019 15:59:31 : Step 1 Before GetAutoChallanCount()
+04/10/2019 15:59:31 : Step 2 GetAutoChallanCount() = 0
+04/10/2019 15:59:31 : Step 3 Before SaveChallaninTemp()
+04/10/2019 15:59:47 : Step 3 After SaveChallaninTemp().. result : 1
+04/10/2019 15:59:47 : ==== LoadTempChallanDetails() - START ====
+04/10/2019 15:59:47 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 15:59:47 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 15:59:47 : challans.Count : 10
+04/10/2019 15:59:47 : After rptTempChallan.DataSource
+04/10/2019 15:59:47 : Before UpdateStatus1
+04/10/2019 15:59:47 : === Inside UpdateStatus1 ===
+04/10/2019 15:59:47 : Step 1
+04/10/2019 15:59:47 : total Challan Row Count 4340
+04/10/2019 15:59:47 : currentPageIndex == 1
+04/10/2019 15:59:47 : == UpdateStatus1 Ends ==
+04/10/2019 15:59:47 : After UpdateStatus1
+04/10/2019 15:59:47 : (rptTempChallan.Items.Count 10
+04/10/2019 15:59:47 : ==== LoadTempChallanDetails() - END ====
+04/10/2019 15:59:47 : Step 4
+04/10/2019 15:59:47 : ===  showTempChallan() END ===
+04/10/2019 15:59:47 : === bulkMakePayment_Click  End===
+04/10/2019 16:00:25 : === bulkMakePayment_Click Start ===
+04/10/2019 16:00:25 : ===  showTempChallan() START ===
+04/10/2019 16:00:25 : Step 1 Before GetAutoChallanCount()
+04/10/2019 16:00:25 : Step 2 GetAutoChallanCount() = 0
+04/10/2019 16:00:25 : Step 3 Before SaveChallaninTemp()
+04/10/2019 16:00:42 : Step 3 After SaveChallaninTemp().. result : 1
+04/10/2019 16:00:42 : ==== LoadTempChallanDetails() - START ====
+04/10/2019 16:00:42 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 16:00:42 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 16:00:42 : challans.Count : 10
+04/10/2019 16:00:42 : After rptTempChallan.DataSource
+04/10/2019 16:00:42 : Before UpdateStatus1
+04/10/2019 16:00:42 : === Inside UpdateStatus1 ===
+04/10/2019 16:00:42 : Step 1
+04/10/2019 16:00:42 : total Challan Row Count 4340
+04/10/2019 16:00:42 : currentPageIndex == 1
+04/10/2019 16:00:42 : == UpdateStatus1 Ends ==
+04/10/2019 16:00:42 : After UpdateStatus1
+04/10/2019 16:00:42 : (rptTempChallan.Items.Count 10
+04/10/2019 16:00:42 : ==== LoadTempChallanDetails() - END ====
+04/10/2019 16:00:42 : Step 4
+04/10/2019 16:00:42 : ===  showTempChallan() END ===
+04/10/2019 16:00:42 : === bulkMakePayment_Click  End===
+04/10/2019 16:28:10 : === bulkMakePayment_Click Start ===
+04/10/2019 16:28:10 : ===  showTempChallan() START ===
+04/10/2019 16:28:10 : Step 1 Before GetAutoChallanCount()
+04/10/2019 16:28:10 : Step 2 GetAutoChallanCount() = 0
+04/10/2019 16:28:10 : Step 3 Before SaveChallaninTemp()
+04/10/2019 16:28:27 : Step 3 After SaveChallaninTemp().. result : 1
+04/10/2019 16:28:27 : ==== LoadTempChallanDetails() - START ====
+04/10/2019 16:28:27 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 16:28:27 : After ChallanFacade().GetTempChallanDetails(1, 10)
+04/10/2019 16:28:27 : challans.Count : 10
+04/10/2019 16:28:27 : After rptTempChallan.DataSource
+04/10/2019 16:28:27 : Before UpdateStatus1
+04/10/2019 16:28:27 : === Inside UpdateStatus1 ===
+04/10/2019 16:28:27 : Step 1
+04/10/2019 16:28:27 : total Challan Row Count 4340
+04/10/2019 16:28:27 : currentPageIndex == 1
+04/10/2019 16:28:27 : == UpdateStatus1 Ends ==
+04/10/2019 16:28:27 : After UpdateStatus1
+04/10/2019 16:28:27 : (rptTempChallan.Items.Count 10
+04/10/2019 16:28:27 : ==== LoadTempChallanDetails() - END ====
+04/10/2019 16:28:27 : Step 4
+04/10/2019 16:28:27 : ===  showTempChallan() END ===
+04/10/2019 16:28:27 : === bulkMakePayment_Click  End===
+04/10/2019 16:30:53 : ===  btnCreateAll_Click START ===
+04/10/2019 16:30:53 : Step 1 Before SaveChallanForPayment()
+04/10/2019 16:31:19 : Step 2 details Initiate Bulk Makepayment clicked by K4030 on 04/10/2019 16:31:19 for month September
+04/10/2019 16:31:19 : Step 3 Before LoadLockedDedDetails()
+04/10/2019 16:31:21 : Step 3 After LoadLockedDedDetails()
+04/10/2019 16:31:21 : Step 4 Before GetBulkDedDetailsMonthwiseCount()
+04/10/2019 16:31:24 : Step 4 After GetBulkDedDetailsMonthwiseCount()
+04/10/2019 16:31:24 : Step 5 Before UpdateStatus()
+04/10/2019 16:31:24 : Step 5 After UpdateStatus()
+04/10/2019 16:31:24 : Step 6 Before NullChallanNoExist()
+04/10/2019 16:31:32 : Step 7 IF NullChallanNoExist()
+04/10/2019 16:31:32 : Step 8
+04/10/2019 16:31:32 : Step 9
+04/10/2019 16:31:32 : ===  btnCreateAll_Click END ===
+04/10/2019 16:31:45 : Before IsOltasBlocked()
+04/10/2019 16:31:45 : After IsOltasBlocked()
+04/10/2019 16:31:45 : Before GetRT01Data()
+04/10/2019 16:31:47 : After GetRT01Data()
+04/10/2019 16:31:47 : Before GetTTUMData()
+04/10/2019 16:31:47 : After GetTTUMData()
+04/10/2019 16:31:47 : Before GetTTUMMonthList()
+04/10/2019 16:31:52 : After GetTTUMMonthList()
+04/10/2019 16:31:52 : Before SetOltasStatus()
+04/10/2019 16:31:54 : After SetOltasStatus()
+04/10/2019 16:32:21 : ==== btnGenerateOltas - START ====
+04/10/2019 16:32:21 : ==== GenerateFilesForKB :  START===
+04/10/2019 16:32:21 : Step 1 BranchID : 1
+04/10/2019 16:32:21 : Step 2
+04/10/2019 16:32:21 : Step 3 Before GetIBOltasfile()
+04/10/2019 16:32:21 : Step 3 After GetIBOltasfile()
+04/10/2019 16:32:21 : Step 4 Before RT01 While Loop
+04/10/2019 16:32:21 : Step 5 After RT01 While Loop()
+04/10/2019 16:32:21 : Step 6 details : OLTAS File 04101930.029 is Created by K4030 on 04/10/2019 16:32:21
+04/10/2019 16:32:21 : Step 7 Before SaveOltasDetails()
+04/10/2019 16:32:21 : Step 8 After SaveOltasDetails()Before SaveRTFileNo()
+04/10/2019 16:32:21 : Step 9 After SaveRTFileNo()
+04/10/2019 16:32:21 : Step 10 . Setting downloading path.
+04/10/2019 16:32:21 : Step 11 . Before SetOltasStatus(). ddlMonth.SelectedValue : 9
+04/10/2019 16:32:22 : Step 11 . After SetOltasStatus()
+04/10/2019 16:32:22 : Step 12 . End GenerateFilesforKB()
+04/10/2019 16:32:22 : Step 55
+04/10/2019 16:32:22 : Step 56
+04/10/2019 16:32:22 : ==== btnGenerateOltas_Click == END===
+04/11/2019 15:24:14 : === bulkMakePayment_Click Start ===
+04/11/2019 15:24:28 : === bulkMakePayment_Click Start ===
+04/11/2019 15:24:37 : === bulkMakePayment_Click Start ===
+04/11/2019 15:24:56 : === bulkMakePayment_Click Start ===
+04/11/2019 15:24:57 : === bulkMakePayment_Click Start ===
+04/11/2019 15:25:08 : === bulkMakePayment_Click Start ===
+04/11/2019 15:25:09 : === bulkMakePayment_Click Start ===
+04/11/2019 15:25:54 : === bulkMakePayment_Click Start ===
+04/11/2019 15:32:22 : === bulkMakePayment_Click Start ===
+04/11/2019 15:32:23 : === bulkMakePayment_Click Start ===
+04/11/2019 17:02:16 : === bulkMakePayment_Click Start ===
+04/11/2019 17:02:20 : === bulkMakePayment_Click Start ===
+06/11/2019 16:52:47 : Before IsOltasBlocked()
+06/11/2019 16:52:47 : After IsOltasBlocked()
+06/11/2019 16:52:47 : Before GetRT01Data()
+06/11/2019 16:52:49 : After GetRT01Data()
+06/11/2019 16:52:49 : Before GetTTUMData()
+06/11/2019 16:52:50 : After GetTTUMData()
+06/11/2019 16:52:50 : Before GetTTUMMonthList()
+06/11/2019 16:53:20 : Before IsOltasBlocked()
+06/11/2019 16:53:20 : After IsOltasBlocked()
+06/11/2019 16:53:20 : Before GetRT01Data()
+06/11/2019 16:53:21 : After GetRT01Data()
+06/11/2019 16:53:21 : Before GetTTUMData()
+06/11/2019 16:53:22 : After GetTTUMData()
+06/11/2019 16:53:22 : Before GetTTUMMonthList()
+06/11/2019 16:55:36 : Before IsOltasBlocked()
+06/11/2019 16:55:36 : After IsOltasBlocked()
+06/11/2019 16:55:36 : Before GetRT01Data()
+06/11/2019 16:55:38 : After GetRT01Data()
+06/11/2019 16:55:38 : Before GetTTUMData()
+06/11/2019 16:55:39 : After GetTTUMData()
+06/11/2019 16:55:39 : Before GetTTUMMonthList()
+06/11/2019 16:55:40 : Before IsOltasBlocked()
+06/11/2019 16:55:40 : After IsOltasBlocked()
+06/11/2019 16:55:40 : Before GetRT01Data()
+06/11/2019 16:55:41 : After GetRT01Data()
+06/11/2019 16:55:41 : Before GetTTUMData()
+06/11/2019 16:55:42 : After GetTTUMData()
+06/11/2019 16:55:42 : Before GetTTUMMonthList()
+06/11/2019 16:55:57 : === bulkMakePayment_Click Start ===
+06/11/2019 16:55:57 : ===  showTempChallan() START ===
+06/11/2019 16:55:57 : Step 1 Before GetAutoChallanCount()
+06/11/2019 16:55:58 : Step 2 GetAutoChallanCount() = 0
+06/11/2019 16:55:58 : Step 3 Before SaveChallaninTemp()
+06/11/2019 16:56:09 : Step 3 After SaveChallaninTemp().. result : 1
+06/11/2019 16:56:09 : ==== LoadTempChallanDetails() - START ====
+06/11/2019 16:56:09 : Before ChallanFacade().GetTempChallanDetails(1, 10)
+06/11/2019 16:56:09 : After ChallanFacade().GetTempChallanDetails(1, 10)
+06/11/2019 16:56:09 : No Records found for selected month.
+06/11/2019 16:56:09 : ==== LoadTempChallanDetails() - END ====
+06/11/2019 16:56:09 : Step 4
+06/11/2019 16:56:09 : ===  showTempChallan() END ===
+06/11/2019 16:56:09 : === bulkMakePayment_Click  End===
+06/11/2019 16:56:34 : Before IsOltasBlocked()
+06/11/2019 16:56:34 : After IsOltasBlocked()
+06/11/2019 16:56:34 : Before GetRT01Data()
+06/11/2019 16:56:36 : After GetRT01Data()
+06/11/2019 16:56:36 : Before GetTTUMData()
+06/11/2019 16:56:36 : After GetTTUMData()
+06/11/2019 16:56:36 : Before GetTTUMMonthList()
