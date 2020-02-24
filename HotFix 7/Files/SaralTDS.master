@@ -1,0 +1,614 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="SaralTDS, App_Web_saraltds.master.cdcab7d2" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Relyon SaralTDS</title>
+    <link href="App_Themes/Standard/Standard.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="../JavaScript/Script.js" type="text/javascript"></script>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=.25)" />
+    <style type="text/css">
+        .modalPopup
+        {
+            background-color: #ffffdd;
+            border-width: 5px;
+            border-style: solid;
+            border-color: Gray;
+            padding: 5px;
+            width: 400px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body ondragstart="return false" onload="f_onload();" onkeydown="checkcontrol();"
+    oncontextmenu="alert('Right Click Disabled!');return false;">
+    <form id="form1" runat="server" autocomplete="off">
+    <cc1:ModalPopupExtender ID="ModalPopup" BehaviorID="mpup" runat="server" CancelControlID="btnCancel"
+        TargetControlID="btn" BackgroundCssClass="modalBackground" PopupControlID="pnlExpiryTime">
+    </cc1:ModalPopupExtender>
+    <asp:ScriptManager ID="masterScriptMgr" runat="server" EnablePageMethods="true" ScriptMode="Release"
+        AsyncPostBackTimeout="360000" EnablePartialRendering="true">
+    </asp:ScriptManager>
+    <asp:HiddenField ID="hdnCloseBrowser" runat="server" Value="0" />
+    <asp:HiddenField ID="hdnIsCustTaxs" runat="server" Value="0" />
+    <asp:HiddenField ID="hdnIsCBI" runat="server" Value="0" />
+    <asp:HiddenField ID="hdnTimeout" runat="server" Value="0" />
+    <asp:HiddenField ID="hdnCtrlKeyBlock" runat="server" Value="0" />
+    <asp:HiddenField ID="hdnDefaultPwdSet" runat="server" Value="0" />
+    <div id="wrapper">
+        <div id="topHeader">
+            <div id="divTrial" style="z-index: 100000; left: 0px; margin-top: 5px; font: messagebox;
+                color: red; position: absolute; top: 0px" runat="server" visible="false">
+                TRIAL version
+                <asp:Literal ID="Littrial" runat="server"></asp:Literal><br />
+                Visit <a href="http://www.relyonsoft.com" target="_blank"><b>www.relyonsoft.com</b></a>
+                to obtain a licensed copy.
+            </div>
+            <div id="topToolBar">
+                <asp:HyperLink ID="lbleTDSCellofROs" Text="eTDS Cell of ROs" runat="server" NavigateUrl="~/Shared/eTDS Cell of ROs.mht"></asp:HyperLink>
+                |
+                <asp:HyperLink ID="lblUserName" Text="" runat="server" NavigateUrl="~/Authentication/SwitchBranch.aspx"></asp:HyperLink>
+                |
+                <asp:HyperLink ID="hlnkChangePwd" runat="server" Text="Change Password" NavigateUrl="~/Password/ChangePassword.aspx" />
+                |
+                <asp:HyperLink ID="HyperLink1" runat="server" Target="_blank" Text="FAQ" NavigateUrl="~/TDS_Help/FAQ.htm" />
+                | <a href="../TDS_Help/Saral_TDS_Web.htm" target="_blank">Help</a> | <a href="http://www.relyonsoft.com"
+                    target="_blank">Relyon Softech</a> |
+                <asp:HyperLink ID="lnkLogout" runat="server" Text="Logout" NavigateUrl="~/Authentication/Logout.aspx"
+                    onclick="return Confirm();" />
+            </div>
+            <table style="width: 960px; margin-bottom: 5px;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <div style="margin-bottom: 5px; margin-top: 10px; padding-left: 15px;">
+                            <img src="../App_Themes/Standard/Images/webtds.png" border="0" alt="SaralTDS Web " /></div>
+                    </td>
+                    <td>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/App_Themes/Standard/Images/Bank.gif" />
+                    </td>
+                    <td rowspan="2">
+                        <div style="width: 146px; right: 10px; float: right">
+                            <a href="http://www.relyonsoft.com" target="_blank">
+                                <img src="../App_Themes/Standard/Images/relyon-logo.gif" style="border-style: none;"
+                                    alt="Relyon Softech Ltd" />
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="font-size: 9px; width: 250px; margin: 0px 0px 0px 25px; color: #868f98;">
+                            Complete TDS Solution</div>
+                    </td>
+                </tr>
+            </table>
+            <div id="versiondiv" style="padding-left: 5px; height: 20px;" runat="server">
+                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="width: 250px">
+                            <asp:Label ID="lblVersion" runat="server" Font-Names="Verdana" Font-Overline="False"
+                                Font-Size="Smaller"></asp:Label>
+                        </td>
+                        <td align="left">
+                            <asp:Label ID="expirydays" Text="" runat="server" Font-Names="Verdana" Font-Overline="False"></asp:Label>
+                        </td>
+                        <td align="left">
+                            <asp:Label ID="lblTimer" Text="" runat="server" Font-Names="Verdana" Font-Overline="False"></asp:Label>
+                        </td>
+                        <td align="right" style="padding-right: 5px">
+                            <asp:Label ID="lblTAN" Text="TAN : " runat="server" Font-Names="Verdana" Font-Overline="False"
+                                Font-Size="Smaller" Font-Bold="true"></asp:Label>
+                            |
+                            <asp:Label ID="lblFinYear" Text="Financial Year : " runat="server" Font-Names="Verdana"
+                                Font-Overline="False" Font-Size="Smaller" Font-Bold="true"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="page">
+            <div id="leftNav" style="display: none">
+                <div class="dialog" style="text-align: left; width: 185px;">
+                    <div class="dHeader">
+                        Menu</div>
+                    <div style="padding: 10px; border-top: solid 1px White" id="leftmenu" runat="server">
+                        <table id="menutable" style="width: 100%;" align="center" cellpadding="0" cellspacing="0"
+                            border="0" runat="server">
+                            <tr>
+                                <td width="90%">
+                                    <asp:Menu ID="mnuTDS" ItemWrap="false" runat="server" CssClass="menu" DynamicHorizontalOffset="-4"
+                                        OnMenuItemClick="MenuItemClick" DynamicVerticalOffset="1" Font-Bold="false" Font-Size="10"
+                                        Font-Names="verdana" MaximumDynamicDisplayLevels="3" Orientation="Vertical" ForeColor="Black"
+                                        StaticHoverStyle-BackColor="#cbcbcb" StaticHoverStyle-ForeColor="Black" StaticMenuItemStyle-HorizontalPadding="10px">
+                                        <DynamicMenuItemStyle ItemSpacing="3px" Width="200px" HorizontalPadding="10px" />
+                                        <DynamicHoverStyle BorderStyle="Outset" BorderWidth="0px" />
+                                        <DynamicMenuStyle ForeColor="Black" BorderStyle="Outset" BorderWidth="1px" HorizontalPadding="2px"
+                                            VerticalPadding="1px" />
+                                        <LevelSubMenuStyles>
+                                            <asp:SubMenuStyle BorderWidth="0px" HorizontalPadding="2px" VerticalPadding="3px" />
+                                        </LevelSubMenuStyles>
+                                        <StaticHoverStyle></StaticHoverStyle>
+                                        <Items>
+                                            <asp:MenuItem Text="Help" Value="mnuHelp" Target="_blank"></asp:MenuItem>
+                                            <asp:MenuItem Text="Home" Value="mnuHome"></asp:MenuItem>
+                                            <asp:MenuItem Text="Administration" Value="mnuAdministration" Selectable="False">
+                                                <asp:MenuItem Text="Default Settings" Value="mnuDefaultSettings"></asp:MenuItem>
+                                                <asp:MenuItem Text="Branch" Value="mnuBranch"></asp:MenuItem>
+                                                <asp:MenuItem Text="Users" Value="mnuUsers"></asp:MenuItem>
+                                                <asp:MenuItem Text="User Roles" Value="mnuUserRoles"></asp:MenuItem>
+                                                <asp:MenuItem Text="Summary" Value="mnuSummary"></asp:MenuItem>
+                                                <asp:MenuItem Text="User Log Detail" Value="mnuUserLog"></asp:MenuItem>
+                                                <asp:MenuItem Text="Assign Branches" Value="mnuAsgnBranches"></asp:MenuItem>
+                                                <asp:MenuItem Text="Challan Payment" Value="mnuChallanPayInt"></asp:MenuItem>
+                                                <asp:MenuItem Text="Salary" Value="mnuSalaryHead" Selectable="False">
+                                                    <asp:MenuItem Text="Salary Heads" Value="mnuSalaryHeads"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Interest Free or Concessional Loans&nbsp" Value="mnuLoans"></asp:MenuItem>
+                                                    <asp:MenuItem Text="DTF Scale" Value="mnuDTF"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Tax Slab" Value="mnuTaxSlab"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Salary Recalculation" Value="mnuSalaryRecalculation"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuTextImport"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom_Salary" Value="mnuCustomExport007_1"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom_Non-Salary" Value="mnuCustomExport007_2"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport006"></asp:MenuItem>
+                                                <asp:MenuItem Text="Reports" Value="mnuReports"></asp:MenuItem>
+                                                <asp:MenuItem Text="TDS Rate" Value="mnuTDSRate"></asp:MenuItem>
+                                                <asp:MenuItem Text="Audit Trail" Value="mnuAudit"></asp:MenuItem>
+                                                <asp:MenuItem Text="E-Return Defaulters " Value="mnuEmailDef"></asp:MenuItem>
+                                                <asp:MenuItem Text="Import SBPAYFILE" Value="mnupayfile"></asp:MenuItem>
+                                                <asp:MenuItem Text="Update Mismatch Amount" Value="mnuMismatchDetail"></asp:MenuItem>
+                                                <asp:MenuItem Text="Check Digit" Value="mnuchkDigit"></asp:MenuItem>
+                                                <asp:MenuItem Text="Country Code Mapping" Value="mnuMapping"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport008"></asp:MenuItem>
+                                                <asp:MenuItem Text="EReturn History" Value="mnuEReturnHistory"></asp:MenuItem>
+                                                <asp:MenuItem Text="CSI Upload" Value="mnuCSIupload"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport10"></asp:MenuItem>
+                                                <asp:MenuItem Text="TD/Sundry File Import" Value="mnuCustomExport11_1"></asp:MenuItem>
+                                                <asp:MenuItem Text="Salary Import" Value="mnuCustomExport11_2"></asp:MenuItem>
+                                                <asp:MenuItem Text="Salary Import" Value="mnuCustomExport12"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport12_2"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport13_1"></asp:MenuItem>
+                                                <asp:MenuItem Text="Bulk Ereturn" Value="mnuBulkEreturn"></asp:MenuItem>
+                                                <asp:MenuItem Text="Bulk Ereturn Form15GH" Value="mnuBulkEreturnF15GH"></asp:MenuItem>
+                                                <asp:MenuItem Text="Transfer Branch" Value="mnuTransferBranch"></asp:MenuItem>
+                                                <asp:MenuItem Text="Manage Data" Value="mnuManageData"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport14_1"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport15_1"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport16"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Value="mnuSettings" Text="Settings">
+                                                <asp:MenuItem Text="PDF / eSign Setting" Value="mnuPDFeSignSettings"></asp:MenuItem>
+                                                <asp:MenuItem Text="TIN Offline Settings" Value="mnuTINofflineSettings"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Masters" Value="mnuMasters">
+                                                <asp:MenuItem Text="Deductor" Value="mnuDeductor"></asp:MenuItem>
+                                                <asp:MenuItem Text="Deductee (Employee)" Value="mnuDeducteeEmp"></asp:MenuItem>
+                                                <asp:MenuItem Text="Employee(Transfered/Pensioner/Others)" Value="mnuDeducteeEmpPensioner">
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Deductee (Non Employee-Zone)" Value="mnuDeducteeNonEmp"></asp:MenuItem>
+                                                <asp:MenuItem Text="Deductee (Non Employee-Branch)" Value="mnuDeducteeNonEmpBranch">
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Purchase Order" Value="mnuPurchaseOrder"></asp:MenuItem>
+                                                <asp:MenuItem Text="Remitting Banks" Value="mnuBanks"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="false" Text="Form 24G" Value="mnuForm24G">
+                                                <asp:MenuItem Text="Transaction Details" Value="mnuTransactionDetails"></asp:MenuItem>
+                                                <asp:MenuItem Text="e-Return" Value="mnueReturn"></asp:MenuItem>
+                                                <asp:MenuItem Text="Acknowledgement No.&nbsp" Value="mnuAcknowledgementNoF24G"></asp:MenuItem>
+                                                <asp:MenuItem Text="Correction Return" Value="mnuCorrection"></asp:MenuItem>
+                                                <asp:MenuItem Text="Import FVU F24G" Value="mnuImportFVUF24g"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="Report Payment(ST)" Value="mnuReportPaymentST"></asp:MenuItem>
+                                            <asp:MenuItem Text="Report Payment(GST)" Value="mnuReportPaymentGST"></asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Form 24Q" Value="mnuForm24Q">
+                                                <asp:MenuItem Text="Tax Computation" Value="mnuTaxComputation"></asp:MenuItem>
+                                                <asp:MenuItem Selectable="False" Text="Quarter 1" Value="mnuQuarter1">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Deduction Details" Value="mnuDedDetailsStaffF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Other Pensioner Deduction Details" Value="mnuDedDetailsOPF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Pensioner Deduction Details" Value="mnuDedDetailsSPF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF24Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF24Q1"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 2" Value="mnuQuarter2">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Deduction Details" Value="mnuDedDetailsStaffF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Other Pensioner Deduction Details" Value="mnuDedDetailsOPF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Pensioner Deduction Details" Value="mnuDedDetailsSPF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF24Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF24Q2"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 3" Value="mnuQuarter3">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Deduction Details" Value="mnuDedDetailsStaffF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Other Pensioner Deduction Details" Value="mnuDedDetailsOPF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Pensioner Deduction Details" Value="mnuDedDetailsSPF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF24Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF24Q3"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 4" Value="mnuQuarter4">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Deduction Details" Value="mnuDedDetailsStaffF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Other Pensioner Deduction Details" Value="mnuDedDetailsOPF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Staff Pensioner Deduction Details" Value="mnuDedDetailsSPF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Salary Details" Value="mnuSalaryDetails"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Salary Details" Value="mnuPensionerSalaryDetails"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF24Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF24Q4"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Acknowledgement No." Value="mnuAcknowledgementNoF24"></asp:MenuItem>
+                                                <asp:MenuItem Text="Display Linked Challans" Value="mnuDisplayLinkedChaF24"></asp:MenuItem>
+                                                <asp:MenuItem Selectable="false" Text="Form 16" Value="mnuForm16F24">
+                                                    <asp:MenuItem Text="Form 16" Value="mnuDedDetailsForm16F24"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 16" Value="mnuRevisedF24Form16"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 16 Reports" Value="mnuRevisedF24Form16Reports"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 16 Reports" Value="mnuForm16Reports"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 16 Download" Value="mnuForm16Download"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="MIS Reports" Value="mnuMISReportsF24"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Form 26Q" Value="mnuForm26Q">
+                                                <asp:MenuItem Text="Reversal Request" Value="mnuReversalRequest"></asp:MenuItem>
+                                                <asp:MenuItem Text="Reversal Approve/Reject" Value="mnuReversalApproveReject"></asp:MenuItem>
+                                                <asp:MenuItem Selectable="False" Text="Quarter 1" Value="mnuQuarter1">
+                                                    <asp:MenuItem Text="Form 15G Details" Value="mnuDetailsF15GQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15H Details" Value="mnuDetailsF15HQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15G/15H eReturn" Value="mnueReturnF15GHQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF26Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF26Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF26Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF26Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF26Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF26Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return Form 15G/15H" Value="mnuCorrectionF15GHQ1">
+                                                    </asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 2" Value="mnuQuarter2">
+                                                    <asp:MenuItem Text="Form 15G Details" Value="mnuDetailsF15GQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15H Details" Value="mnuDetailsF15HQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15G/15H eReturn" Value="mnueReturnF15GHQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF26Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF26Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF26Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF26Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF26Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF26Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return Form 15G/15H" Value="mnuCorrectionF15GHQ2">
+                                                    </asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 3" Value="mnuQuarter3">
+                                                    <asp:MenuItem Text="Form 15G Details" Value="mnuDetailsF15GQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15H Details" Value="mnuDetailsF15HQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15G/15H eReturn" Value="mnueReturnF15GHQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF26Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF26Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF26Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF26Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF26Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF26Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return Form 15G/15H" Value="mnuCorrectionF15GHQ3">
+                                                    </asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 4" Value="mnuQuarter4">
+                                                    <asp:MenuItem Text="Form 15G Details" Value="mnuDetailsF15GQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15H Details" Value="mnuDetailsF15HQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form 15G/15H eReturn" Value="mnueReturnF15GHQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF26Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF26Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF26Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF26Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF26Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF26Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return Form 15G/15H" Value="mnuCorrectionF15GHQ4">
+                                                    </asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Acknowledgement No." Value="mnuAcknowledgementNoF26"></asp:MenuItem>
+                                                <asp:MenuItem Text="Ack No.15G/15H" Value="mnuAckNo15GHF26"></asp:MenuItem>
+                                                <asp:MenuItem Text="Display Linked Challans" Value="mnuDisplayLinkedChaF26"></asp:MenuItem>
+                                                <asp:MenuItem Selectable="False" Text="Form 16A" Value="mnuForm16AF26">
+                                                    <asp:MenuItem Text="Form16 A" Value="mnuDedDetailsF26Q4_26Q4_1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form16 A Reports" Value="mnuDedDetailsF26Q4_26Q4_2"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="MIS Reports" Value="mnuMISReportsF26"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Form 27Q" Value="mnuForm27Q">
+                                                <asp:MenuItem Selectable="False" Text="Quarter 1" Value="mnuQuarter1">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF27Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF27Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF27Q1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27Q1"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 2" Value="mnuQuarter2">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF27Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF27Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF27Q2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27Q2"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 3" Value="mnuQuarter3">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF27Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF27Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF27Q3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27Q3"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 4" Value="mnuQuarter4">
+                                                    <asp:MenuItem Text="Deduction Details" Value="mnuDedDetailsF27Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Data Quality Report" Value="mnuDQRF27Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTDS Return" Value="mnueTDSReturnF27Q4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27Q4"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Acknowledgement No." Value="mnuAcknowledgementNoF27" />
+                                                <asp:MenuItem Text="Display Linked Challans" Value="mnuDisplayLinkedChaF27"></asp:MenuItem>
+                                                <asp:MenuItem Selectable="False" Text="Form 16A" Value="mnuForm16AF26">
+                                                    <asp:MenuItem Text="Form16 A" Value="mnuDedDetailsF26Q4_27Q4_1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form16 A Reports" Value="mnuDedDetailsF26Q4_27Q4_2"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="MIS Reports" Value="mnuMISReportsF27"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Form 27EQ" Value="mnuForm27EQ">
+                                                <asp:MenuItem Selectable="False" Text="Quarter 1" Value="mnuForm27EQuarter1">
+                                                    <asp:MenuItem Text="Collection Details" Value="mnuDedDetailsF27EQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27EQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27EQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTCS Return" Value="mnueTDSReturnF27EQ1"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27EQ1"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 2" Value="mnuForm27EQuarter2">
+                                                    <asp:MenuItem Text="Collection Details" Value="mnuDedDetailsF27EQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27EQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27EQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTCS Return" Value="mnueTDSReturnF27EQ2"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27EQ2"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 3" Value="mnuForm27EQuarter3">
+                                                    <asp:MenuItem Text="Collection Details" Value="mnuDedDetailsF27EQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27EQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27EQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTCS Return" Value="mnueTDSReturnF27EQ3"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27EQ3"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Quarter 4" Value="mnuForm27EQuarter4">
+                                                    <asp:MenuItem Text="Collection Details" Value="mnuDedDetailsF27EQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Challan Details" Value="mnuChaDetailsF27EQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Bulk Challan" Value="mnuBulkChaDetailsF27EQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="eTCS Return" Value="mnueTDSReturnF27EQ4"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Correction Return" Value="mnuCorrectionF27EQ4"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="Acknowledgement No." Value="mnuAcknowledgementNoF27E" />
+                                                <asp:MenuItem Text="Display Linked Challans" Value="mnuDisplayLinkedChaF27E"></asp:MenuItem>
+                                                <asp:MenuItem Selectable="False" Text="Form27 D" Value="mnuForm27E">
+                                                    <asp:MenuItem Text="Form27 D" Value="mnuF27D"></asp:MenuItem>
+                                                    <asp:MenuItem Text="Form27 D Reports" Value="mnuF27DReport"></asp:MenuItem>
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="MIS Reports" Value="mnuMISReportsF27E"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Form 26QAA" Value="mnuForm26QAA">
+                                                <asp:MenuItem Text="Transaction Details" Value="mnuForm26QAATD"></asp:MenuItem>
+                                                <asp:MenuItem Text="eReturn" Value="mnuForm26QAAER"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Import / Export" Value="mnuImportExport">
+                                                <asp:MenuItem Text=".TDS Import" Value="mnuFVUImport"></asp:MenuItem>
+                                                <asp:MenuItem Text="Excel Import" Value="mnuImport"></asp:MenuItem>
+                                                <asp:MenuItem Text="Excel Export" Value="mnuExport"></asp:MenuItem>
+                                                <asp:MenuItem Text="From 15G/15H Xml Import" Value="mnuImport15GH"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport003"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport004"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport005"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport017"></asp:MenuItem>
+                                                <asp:MenuItem Text="Custom Import" Value="mnuCustomExport018"></asp:MenuItem>
+                                                <asp:MenuItem Text="Branches and Users Import" Value="mnuBranchImport"></asp:MenuItem>
+                                                <asp:MenuItem Text="Pensioner Salary Import" Value="mnuPensionerImport"></asp:MenuItem>
+                                                <asp:MenuItem Text="Acknowledgement No. Import" Value="mnuAckNoImport"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="Correction Request" Value="mnuGrievanceAddressal"></asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Text="Tax Related" Value="mnuTaxRelated">
+                                                <asp:MenuItem Text="TRACES" Value="mnuTRACES"></asp:MenuItem>
+                                                <asp:MenuItem Text="TRACES Utilities" Value="mnuTRACES_Utilities"></asp:MenuItem>
+                                                <asp:MenuItem Text="TRACES Direct Login" Value="mnuTRACESDirect" Target="_blank">
+                                                </asp:MenuItem>
+                                                <asp:MenuItem Text="e-Tutorials" Value="mnuETutorials"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="false" Value="mnuCustomerDetails" Text="Customer Details">
+                                                <asp:MenuItem Text="Accounting Heads" Value="mnuAccountingHeads"></asp:MenuItem>
+                                                <asp:MenuItem Text="Assign Cus Branch" Value="mnuAsgnBranchesCus"></asp:MenuItem>
+                                                <asp:MenuItem Text="Direct Tax Master" Value="mnuDirectTax"></asp:MenuItem>
+                                                <asp:MenuItem Text="Direct Tax Payment" Value="mnuDirectTaxPayment"></asp:MenuItem>
+                                                <asp:MenuItem Text="Indirect Tax Master" Value="mnuInDirectTax"></asp:MenuItem>
+                                                <asp:MenuItem Text="Indirect Tax Payment" Value="mnuInDirectTaxPayment"></asp:MenuItem>
+                                                <asp:MenuItem Text="Generate Output" Value="mnuGenerateOutput"></asp:MenuItem>
+                                                <asp:MenuItem Text="Customer Audit" Value="mnuCustomerAudit"></asp:MenuItem>
+                                                <asp:MenuItem Text="Cin Update" Value="mnuCinUpdate"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Selectable="False" Value="mnuTool" Text="Tools">
+                                                <asp:MenuItem Text="TDS Data" Value="mnuTDSData"></asp:MenuItem>
+                                                <asp:MenuItem Text="Bulk Delete" Value="mnuBulkDelete"></asp:MenuItem>
+                                                <asp:MenuItem Text="Import MS-Access Data" Value="mnuImportAccessData"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="Logout" Value="mnuLogOut"></asp:MenuItem>
+                                        </Items>
+                                        <StaticMenuStyle Height="25px" BorderStyle="Groove" BorderWidth="1px" HorizontalPadding="5px" />
+                                    </asp:Menu>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" defer="defer">
+                function f_onload() {
+                    var divMenu1 = document.getElementById("leftNav");
+                    divMenu1.style.display = 'block';
+                }
+            </script>
+            <div id="container">
+                <div class="dialog" style="text-align: left; width: 100%;">
+                    <div class="dHeader">
+                        <asp:Label ID="lblHeader" runat="server" Text=""></asp:Label>
+                    </div>
+                    <div style="padding: 10px; border-top: solid 1px gray;" id="contentPlace" runat="server">
+                        <asp:ContentPlaceHolder ID="contentPlaceHolderBody" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+            <asp:Button ID="btn" runat="server" Style="display: none" />
+            <asp:Panel ID="pnlExpiryTime" runat="server" BackColor="White" CssClass="modalPopup"
+                Style="display: none">
+                <div style="width: 100%; height: 15px; border: 1px; border-color: Black; margin-bottom: 15px;
+                    background-color: #7f858b; color: White; padding: 5px 0px 5px 0px;">
+                    <center>
+                        <asp:Label ID="lblWarning" runat="server" Font-Bold="true"> Warning</asp:Label></center>
+                </div>
+                <table width="100%">
+                    <tr>
+                        <td style="text-align: center" colspan="2">
+                            <p>
+                                You have been idle for <b id="idleTime" runat="server"></b>&nbsp; minutes.
+                                <br />
+                                Page will be logout in <b id="expiryTime" runat="server"></b>&nbsp;seconds.
+                                <br />
+                                <br />
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            &nbsp;&nbsp;<asp:Button ID="btnOK" Width="125px" runat="server" align="left" Text="Keep me Logged-In"
+                                OnClientClick="Enable(); return false;" CssClass="cmnBtn" />
+                        </td>
+                        <td align="right">
+                            <asp:Button ID="btnCancel" OnClientClick="logout();" align="right" Width="125px"
+                                CssClass="cmnBtn" runat="server" Text="Logout" />&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+            <div id="pnlPopup" class="PrProgress" style="display: none;">
+                <div id="innerPopup" class="PrContainer">
+                    <div class="PrHeader">
+                        Please wait...</div>
+                    <div class="PrBody">
+                        <img width="220px" height="19px" src="../App_Themes/Standard/Images/activity.gif"
+                            alt="loading..." />
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                Sys.Application.add_load(applicationLoadHandler);
+                Sys.Application.add_unload(applicationUnloadHandler);
+                Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequestHandler);
+                Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequestHandler);
+            </script>
+        </div>
+    </div>
+    <div style="width: 960px; margin-right: auto; margin-left: auto; margin-top: 2px;
+        overflow: hidden; padding: 0px 10px 8px 10px; background-color: White; border: solid 0px gray;">
+        <div style="float: right; padding-top: 11px; padding-right: 3px;">
+            © 2019 Powered by Relyon Softech Ltd.</div>
+    </div>
+    </form>
+    <script language="JavaScript" type="text/javascript">
+        function closeEditorWarning() {
+            if ((window.event.clientX < 0) || (window.event.clientY < 0) || (window.event.clientX < -80)) {
+                return 'If you are REFRESHING webpage; Click OK\nIf you are closing browser; Click CANCEL, LOGOUT properly and then close the browser'
+            }
+        }
+        window.onbeforeunload = closeEditorWarning;
+
+        function Confirm() {
+            if (document.getElementById("<%=hdnCloseBrowser.ClientID%>").value == "1") {
+                return confirm("Logging Out.. \nFor security purpose browser will be closed after Logging out. \n\nAre you sure you want to continue");
+            }
+            else
+                return true;
+        }
+        function checkcontrol() {
+            if (document.getElementById("<%=hdnCtrlKeyBlock.ClientID%>").value == 1) {
+                if (event.keyCode == 17) {
+                    alert("Ctrl key blocked.");
+                    return false;
+                }
+            }
+        }
+
+        var IsCBI = document.getElementById("<%=hdnIsCBI.ClientID%>").value;
+        var DefaultPwdSet = document.getElementById("<%=hdnDefaultPwdSet.ClientID%>").value;
+        var time = document.getElementById("<%=hdnTimeout.ClientID%>").value;
+        document.getElementById("<%=idleTime.ClientID%>").innerHTML = (time / 60).toFixed(2);
+
+        var seconds_left = time;
+        if ((DefaultPwdSet == "1" || IsCBI == "1") && seconds_left > 0) {
+            var interval = setInterval(function () { timer() }, 1000);
+        }
+        function timer() {
+            var quote = "Idle Time-Out: ";
+            seconds_left = seconds_left - 1;
+            if (seconds_left >= 60) {
+                document.getElementById("<%=lblTimer.ClientID%>").style.color = "black"
+                document.getElementById("<%=lblTimer.ClientID%>").innerHTML = quote +
+                    ((seconds_left % 60) == 0 ? (seconds_left / 60) : (seconds_left / 60).toString().substring(0, (seconds_left / 60).toString().lastIndexOf('.'))) +
+                    ":" + (Math.round(seconds_left % 60).toFixed(0) < 10 ? "0" : "") +
+                    Math.round(seconds_left % 60).toFixed(0);
+            }
+            else if (seconds_left >= 30) {
+                document.getElementById("<%=lblTimer.ClientID%>").style.color = "black"
+                document.getElementById("<%=lblTimer.ClientID%>").innerHTML = quote + seconds_left + " Seconds";
+            }
+            else {
+                document.getElementById("<%=lblTimer.ClientID%>").style.color = "red"
+                document.getElementById("<%=lblTimer.ClientID%>").innerHTML = quote + seconds_left + " Seconds";
+
+            }
+            if (seconds_left <= 0) {
+                document.getElementById("<%=lblTimer.ClientID%>").innerHTML = "";
+                document.getElementById("<%=expiryTime.ClientID%>").innerHTML = seconds_left + 30;
+                $find("mpup").show();
+                document.getElementById("<%=contentPlace.ClientID%>").disabled = true;
+                document.getElementById("<%=leftmenu.ClientID%>").disabled = true;
+                if (seconds_left == -29) {
+                    logout();
+                }
+            }
+        }
+        function logout() {
+            window.location.href = "../Authentication/Logout.aspx";
+        }
+        function Enable() {
+            $find("mpup").hide();
+            document.getElementById("<%=contentPlace.ClientID%>").disabled = false;
+            document.getElementById("<%=leftmenu.ClientID%>").disabled = false;
+
+            seconds_left = time;
+        }
+        function ShowAlert(messageText) {
+            alert('messageText');
+        }
+    </script>
+</body>
+</html>
