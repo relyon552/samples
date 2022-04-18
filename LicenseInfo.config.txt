@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+    <add key="SerialKey" value="r5MhQvLGaQ5aH+/JA/6KosqCI/v3iIrrmemNbp3FMsNSLf3p/iGKf6g6rFY7mSq9iXgsVVckv5eJeCxVVyS/l9Klzeuy0OiFSQJQWeWQt2mZ6Y1uncUyw4l4LFVXJL+XbjErG7rRlsyZ6Y1uncUyw24xKxu60ZbMmemNbp3FMsNOxET5kqFuqA==" />
+  </appSettings>
+</configuration>

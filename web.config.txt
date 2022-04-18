@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!-- 
+    Note: As an alternative to hand editing this file you can use the 
+    web admin tool to configure settings for your application. Use
+    the Website->Asp.Net Configuration option in Visual Studio.
+    A full list of settings and comments can be found in 
+    machine.config.comments usually located in 
+    \Windows\Microsoft.Net\Framework\v2.x\Config 
+-->
+<configuration>
+	<location path="App_Themes/Standard/Login.css">
+		<system.web>
+			<authorization>
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<!-- 
+      Application custom settings 
+    -->
+	<appSettings>
+		<add key="PANVerify" value="1"/>
+		<add key="annexSelect" value="1"/>
+		<add key="ClientName" value="Karnataka Bank"/>
+		<add key="CSIUpload" value="1" />
+		<add key="DataProvider" value="System.Data.SqlClient" />
+		<add key="LogSeverity" value="Error" />
+		<add key="CrystalImageCleaner-AutoStart" value="true" />
+		<add key="CrystalImageCleaner-Sleep" value="60000" />
+		<add key="CrystalImageCleaner-Age" value="120000" />
+		<add key="ChartImageHandler" value="Storage=file;Timeout=20;Url=~/tempImages/;"/>
+		<add key="OleDBProvider" value="Provider=Microsoft.ACE.OLEDB.12.0;Data Source="/>
+		<add key="ExcelProvider" value=";Extended Properties=&quot;Excel 12.0;HDR=YES;&quot;"/>
+		<add key="MSMQName" value=".\private$\eReturn"/>
+		<add key="CtrlKeyBlock" value="0" />
+		<add key="MSMQCorrName" value=".\private$\CorrReturn"/>
+		<add key="MSMQ15GH" value=".\private$\eRetrn15GH"/>
+		<add key="StaffBranchCode" value="001"/>
+		<add key="DefaultPwdSet" value="1"/>
+	        <!--<add key="DoNotUse" value="4^1^0^0^31-Mar-2021^0^0^1^0^0^0^1^0^0^0^0^1@@@0^0^0^0^0$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^0^0^1^1^1^1^0^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0@@@@0^0^0^0^3$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^1^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0@@@@@0^0^0^0^4$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^0^0^0^1^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0"/>-->
+		<!--<add key="DoNotUse" value="4^1^0^0^31-Mar-2022^0^0^1^0^0^0^1^0^0^0^0^1^1@@@0^0^0^0^0$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^0^0^1^1^1^1^0^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0@@@@0^0^0^0^3$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^1^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0@@@@@@@0^0^0^0^5$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^0^0^0^1^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0"/>-->
+		<!--<add key="DoNotUse" value="4^1^0^0^31-Mar-2022^0^0^0^0^0^0^0^0^0^0^0^0^1@@@@@@@@@@@@@0^0^0^0^11$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^1^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0"/> -->
+		    <add key="DoNotUse" value="4^1^0^0^31-Mar-2023^0^0^1^0^0^0^0^0^0^0^0^0^0^1@@@0^0^0^0^0$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^0^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0@@@@@@@@@@@0^0^0^0^10$1^1^1^1^1^1^1^1^1^1^0^0^0^1^1^1^0^0^1^0^1^1^1^1^1^0^0^0^0^0^0^0^0^0^1^0^0^0^0^0^0^0^0^0^0^0^0^0"/>
+</appSettings>
+	<!-- 
+      Connection string settings 
+    -->
+	<connectionStrings>		
+		
+	   <add name="System.Data.SqlClient" connectionString="Data Source=172.20.115.78,1533; User ID=saraluser;pwd=saraluser@123;initial catalog=SaralTDSDemo" />
+	  <!--<add name="System.Data.SqlClient" connectionString="Data Source=172.20.111.167,1533; User ID=saraluser;pwd=saraluser@123;initial catalog=SaralTDSDemo" />-->
+	</connectionStrings>
+	<system.web>
+	<globalization culture="en-GB" ></globalization>
+		<!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+        -->
+		<sessionState mode="InProc" timeout="20" cookieless="false"></sessionState>
+		<compilation debug="false">
+			<assemblies>
+				<add assembly="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+				<add assembly="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+				<add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+				<add assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+				
+				<add assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				</assemblies>
+		</compilation>
+		<!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+		<authentication mode="Forms">
+			<forms loginUrl="~/Authentication/Login.aspx" protection="All" timeout="20" defaultUrl="~/Shared/Home.aspx" slidingExpiration="true" />
+		</authentication>
+		<authorization>
+			<deny users="?" />
+		</authorization>
+		<!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+        <customErrors mode="On" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+			<error statusCode="500" redirect="TimeOutError.aspx" />
+        </customErrors>
+        -->
+		<pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+			<controls>
+				<add tagPrefix="asp" namespace="System.Web.UI.DataVisualization.Charting" assembly="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+			</controls>
+		</pages>
+	
+		 <httpRuntime executionTimeout="14400" maxRequestLength="2097151" enableVersionHeader="false" targetFramework="4.6.1" />
+
+		<httpModules>
+			<add name="LicenseModule" type="Relyon.LicenseModule"/>
+        </httpModules>
+	</system.web>
+	
+	<!-- 
+        The system.webServer section is required for running ASP.NET AJAX under Internet
+        Information Services 7.0.  It is not necessary for previous version of IIS.
+    -->
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="false" />
+		<modules>
+			<remove name="ScriptModule" />
+			<add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+		</modules>
+		<security>
+                              <requestFiltering>
+                                                <requestLimits maxAllowedContentLength="2147483648" />
+                              </requestFiltering>
+		</security>		
+	</system.webServer>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="4.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="4.0.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+<system.serviceModel>
+ 
+  <bindings>
+   <wsHttpBinding>
+    <binding name="WSHttpBinding_IEReturn" closeTimeout="00:20:00"
+     openTimeout="00:20:00" receiveTimeout="00:20:00" sendTimeout="00:20:00"
+     bypassProxyOnLocal="false" transactionFlow="false" hostNameComparisonMode="StrongWildcard"
+     maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text"
+     textEncoding="utf-8" useDefaultWebProxy="true" allowCookies="false">
+     <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+      maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+     <reliableSession ordered="true" inactivityTimeout="00:20:00"
+      enabled="false" />
+     <security mode="Message">
+      <transport clientCredentialType="Windows" proxyCredentialType="None"
+       realm="" />
+      <message clientCredentialType="Windows" negotiateServiceCredential="true"
+       algorithmSuite="Default" establishSecurityContext="true" />
+     </security>
+    </binding>
+   </wsHttpBinding>
+  </bindings>
+  <client>
+   <endpoint address="http://172.20.101.85/SaralTDSWEBLIVE/SaralTDSService.EReturn.svc"
+    binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IEReturn"
+    contract="EReturnServiceReference.IEReturn" name="WSHttpBinding_IEReturn">
+    <identity>
+     <dns value="localhost" />
+    </identity>
+   </endpoint>
+  </client>
+      <services>
+      <service behaviorConfiguration="SaralTDSService.Service1Behavior"
+        name="SaralTDSService.EReturn">
+        <endpoint address="" binding="wsHttpBinding" contract="SaralTDSService.IEReturn">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://172.20.101.85/SaralTDSWEBLIVE/"/>
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="SaralTDSService.Service1Behavior">
+<serviceThrottling maxConcurrentCalls="200" maxConcurrentInstances="200" maxConcurrentSessions="200" />
+          <!-- To avoid disclosing metadata information, 
+          set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="True"/>
+          <!-- To receive exception details in faults for debugging purposes, 
+          set the value below to true.  Set to false before deployment 
+          to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="True" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+ </system.serviceModel>
+
+<system.net> 
+	<connectionManagement> 
+		<add address="*" maxconnection="400" /> 
+	</connectionManagement> 
+ </system.net>
+
+</configuration>
